@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { Eye } from 'lucide-react';
 import { LayoutDashboard, PackagePlus, PackageMinus, Pencil } from 'lucide-react';
+import { LogOut } from 'lucide-react';
 
 const Sidebar = () => {
   return (
@@ -16,7 +17,7 @@ const Sidebar = () => {
         <hr />
       </div>
       {/* side menu */}
-      <div className="w-full pt-2 gap-5">
+      <div className="w-full flex-1 pt-2 gap-5">
         <NavLink 
           to="/" 
           className={({ isActive }) => `rounded-xl p-2 font-semibold text-xl gap-2 flex items-center ${isActive ? 'text-pink-500' : 'text-white'} hover:bg-neutral-950`}
@@ -52,7 +53,18 @@ const Sidebar = () => {
           <Pencil className="ml-3" />
           Edit Details
         </NavLink>
+
+        
       </div>
+      
+      <div className=" flex flex-col  items-center pb-4 justify-end h-full ">
+        <NavLink 
+          to="/logout" 
+          className= "rounded-xl p-2  w-full  text-rose-400 font-semibold text-xl gap-2 flex items-center   hover:bg-neutral-950"
+        >
+          <LogOut   className=" ml-3  text-rose-400"/>
+          Log out
+        </NavLink></div>
     </div>
   );
 };
