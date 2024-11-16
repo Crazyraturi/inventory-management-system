@@ -1,6 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
-import { Shirt, Tag, Box, ShoppingCart, BarChart } from "lucide-react";
+
 
 const Dashboard = () => {
   return (
