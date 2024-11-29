@@ -10,9 +10,24 @@ const ViewProductDetails = () => {
 
     // Mock data - Replace this with API call or database query
     const mockData = {
-      "101": { type: "Electronics", length: "10 cm", colour: "Black", date: "2024-01-10" },
-      "102": { type: "Furniture", length: "1.5 m", colour: "Brown", date: "2023-12-20" },
-      "103": { type: "Clothing", length: "Medium", colour: "Red", date: "2024-03-15" },
+      101: {
+        type: "Electronics",
+        length: "10 cm",
+        colour: "Black",
+        date: "2024-01-10",
+      },
+      102: {
+        type: "Furniture",
+        length: "1.5 m",
+        colour: "Brown",
+        date: "2023-12-20",
+      },
+      103: {
+        type: "Clothing",
+        length: "Medium",
+        colour: "Red",
+        date: "2024-03-15",
+      },
     };
 
     if (mockData[productId]) {
@@ -26,12 +41,10 @@ const ViewProductDetails = () => {
 
   return (
     <div className="h-full w-full bg-pink-100 flex flex-col">
-  
-
       {/* Form Container */}
       <div className="flex-grow flex items-center justify-center">
         <div className="bg-white p-8 rounded-xl shadow-md w-full max-w-md">
-          <h2 className="text-pink-600 text-xl font-semibold mb-6 text-center">
+          <h2 className="text-pink-600 text-2xl font-bold mb-6 text-center">
             Enter Product ID to View Details
           </h2>
 
@@ -68,7 +81,9 @@ const ViewProductDetails = () => {
 
           {/* Error Message */}
           {error && (
-            <p className="text-red-500 mt-4 text-center font-semibold">{error}</p>
+            <p className="text-red-500 mt-4 text-center font-semibold">
+              {error}
+            </p>
           )}
 
           {/* Product Details */}

@@ -25,13 +25,10 @@ const RemoveProductForm = () => {
 
   return (
     <div className="h-full w-full bg-pink-100 flex flex-col">
-      
-      
-
       {/* Form Container */}
       <div className="flex-grow flex items-center justify-center">
         <div className="bg-white p-8 rounded-xl shadow-md w-full max-w-md">
-          <h2 className="text-pink-600 text-xl font-semibold mb-6 text-center">
+          <h2 className="text-pink-600 text-2xl font-bold mb-6 text-center">
             Enter Product Details to Remove
           </h2>
           <form onSubmit={handleRemove}>
